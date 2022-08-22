@@ -2,16 +2,17 @@ body {
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template: auto 4fr/ 1fr 4fr;
     margin: 0;
     padding: 0;
+    color: #EEEEEE;
 }
 
 .header {
     display: grid;
     grid-template: auto 1fr / 2fr 1fr;
     grid-column: 2/4;
-    border: 1px solid black;
+    background-color: #393E46;
 }
 .search-bar {
     display: flex;
@@ -25,6 +26,24 @@ body {
     border: 1px solid yellow;    
 }
 
+.profile img {
+    border-radius:50%;
+    width: 3rem;
+    height: 3rem;
+}
+
+.hello img {
+    border-radius:50%;
+    width: 5rem;
+    height: 5rem; 
+    grid-area: 1/1/3/2;
+}
+
+.hello {
+    display: grid;
+    grid-template: 1fr 1fr/1fr 1fr;
+}
+
 .buttons {
     grid-column: ;
 
@@ -33,20 +52,38 @@ body {
 
 .sidebar {
     grid-area: 1/1/4/2;
+    background-color: #222831;
+}
+
+.sidebar ul {
+    list-style: none;
 }
 
 .content-area {
     border: 1px solid gray;
     grid-area: 2/2/4/4;
+    background-color: #00ADB5;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
 }
 
 .projects {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));;
+    grid-column: 1/2;
 }
 .card {
     border: 1px solid purple;
     width: 100px;
     height: 100px;
+}
+
+.announcements {
+    grid-column: 2/3;
+}
+
+.trending {
+    grid-column: 2/3;
+    grid-row: 2/3;
 }

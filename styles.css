@@ -1,0 +1,52 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: grid;
+    grid-template: auto 1fr / 2fr 1fr;
+    grid-column: 2/4;
+    border: 1px solid black;
+}
+.search-bar {
+    display: flex;
+    grid-area: 1/1/2/2;
+    border: 1px solid blue;    
+}
+
+.profile {
+    display: flex;
+    grid-area: 1/2/2/3;
+    border: 1px solid yellow;    
+}
+
+.buttons {
+    grid-column: ;
+
+    border: 1px solid red;   
+}
+
+.sidebar {
+    grid-area: 1/1/4/2;
+}
+
+.content-area {
+    border: 1px solid gray;
+    grid-area: 2/2/4/4;
+}
+
+.projects {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));;
+}
+.card {
+    border: 1px solid purple;
+    width: 100px;
+    height: 100px;
+}
